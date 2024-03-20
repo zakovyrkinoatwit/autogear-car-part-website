@@ -2,16 +2,54 @@
     margin: 0px;
     padding: 0px;
 }
+body {
+    height: 100vh;
+    width: 100vw;
+}
+#search {
+    float: right;
+    text-align: left;
+    display: flex;
+    justify-content: right;
+    width: 28%;
+    height: 100%;
+    position: relative;
+}
+#search img {
+    height: 100%;
+}
+#search input {
+    height: 100%;
+    width: 100%; 
+    padding-right: 30px;
+    border-radius: 50px;
+}
+#search button {
+    position: absolute; /* Position the button */
+    top: 13.25%;
+    right: 7px;
+    height: 80%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
 #cart {
+    text-align: right;
     float: right;
     height: 100%;
+    width: 35%;
 }
 #cart img {
     height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    height: 4%;
 }
 nav {
     background-color: black;
-    height: 4.75em;
+    height: 100%;
     margin: 0px;
     padding: .5em;
     color: white;
