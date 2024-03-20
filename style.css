@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#cart {
+    float: right;
+    height: 100%;
+}
+#cart img {
+    height: 100%;
+}
+nav {
+    background-color: black;
+    height: 4.75em;
+    margin: 0px;
+    padding: .5em;
+    color: white;
+}
+#logo {
+    height: 100%;
+}
