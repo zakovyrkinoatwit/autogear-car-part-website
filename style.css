@@ -63,9 +63,27 @@ ul {
 ul, li {
     list-style: none;
     display: flex;
+    float: left;    
+    margin: 165px auto;
+    margin-left: 20px;
+}
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li p {
+    display: flex;
     float: left;
 }
-section img {
+li a {
+    color: black;
+}
+li a:hover {
+    color: blue;
+    cursor: pointer;
+}
+li img {
     position: relative;
     width: 50%;
     padding: 2px;
@@ -76,6 +94,7 @@ img {vertical-align: middle;}
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: -1;
 }
 .slideshow-container img {
     width: 100%;
