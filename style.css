@@ -165,3 +165,76 @@ footer .copyright-bar {
     width: 100%;
     box-sizing: border-box;
 }
+.product-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* This adds space between the items */
+}
+
+.product-item {
+    width: 220px; /* Set a fixed width for each product */
+    border: 1px solid #ddd; /* A light border around each product */
+    padding: 10px;
+    border-radius: 5px; /* Optional: rounds the corners of the product-item borders */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow to each product */
+    background-color: #fff; /* Background color for the product items */
+}
+
+.product-item img {
+    width: 100%; /* Makes the image fully span the width of its container */
+    height: auto; /* Keeps the aspect ratio of the image */
+    border-bottom: 1px solid #eee; /* Adds a subtle line between the image and the text */
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.product-item p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.product-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-item {
+        width: 90%; /* Makes each product take up more space on smaller screens */
+    }
+}
