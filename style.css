@@ -10,13 +10,12 @@ body {
 }
 /* Nav styling */
 #search {
-    float: right;
-    text-align: left;
     display: flex;
-    justify-content: right;
     width: 28%;
     height: 85%;
     position: relative;
+    float: inline-end;
+    margin-right: 30%;
 }
 #search img {
     height: 100%;
@@ -28,7 +27,7 @@ body {
     border-radius: 50px;
 }
 #search button {
-    position: absolute; /* Position the button */
+    position: absolute;
     top: 13.25%;
     right: 7px;
     height: 80%;
@@ -36,16 +35,14 @@ body {
     background: transparent;
     cursor: pointer;
 }
-#cart {
-    text-align: right;
-    float: right;
+#cart, #user {
     height: 100%;
-    width: 35%;
+    width: 2.6%;
+    position: relative;
+    float: inline-end
 }
-#cart img {
+#cart img, #user img {
     height: 100%;
-    padding: 0px;
-    margin: 0px;
 }
 header {
     height: 6%;
