@@ -19,6 +19,7 @@ function showSlides() {
   setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
+
 /* User Button */
 document.addEventListener('DOMContentLoaded', (event) => {
   const userIcon = document.getElementById('user-icon');
@@ -51,3 +52,4 @@ function showLogin() {
   document.getElementById('login').style.display = 'block';
   document.getElementById('register').style.display = 'none';
 }
+
