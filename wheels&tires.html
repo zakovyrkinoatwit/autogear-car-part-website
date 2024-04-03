@@ -11,7 +11,7 @@
         <nav>
             <a href="homePage.html"><img src="autogearlogos\autogear-new-color-transparent.png" id="logo"></a>
             <div id="cart">
-                <a href="checkoutPage.html"><img src="autogearlogos/shopping-cart.png"></a>
+                <img src="autogearlogos/shopping-cart.png" id="cart-icon" style="cursor: pointer;">
             </div>
             <div id="search">
                 <input type="text" placeholder="    Search...">
@@ -27,13 +27,13 @@
                     <img src="part-photos/car-wheel.png" alt="Wheel 1">
                     <h3>Performance Wheel</h3>
                     <p>$150.00</p>
-                    <button>Add to Cart</button>
+                    <button data-product-id="1" class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item">
                     <img src="part-photos/car-wheel.png" alt="Wheel 2">
                     <h3>All-Season Tire</h3>
                     <p>$100.00</p>
-                    <button>Add to Cart</button>
+                    <button data-product-id="2" class="add-to-cart">Add to Cart</button>
                 </div>
                 <!-- Continue listing more products here -->
             </div>
@@ -59,6 +59,16 @@
                 Copyright © 2024 AutoGear.com. All rights reserved.
             </div>
     </footer>
-    <script type="text/javascript" src="functionality.js"></script>
+    <script type="text/javascript" src="cart.js"></script>
+   
+    <div id="cart-overlay" class="cart-overlay">
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <button id="close-cart">Close Cart</button>
+        </div>
+    </div>
+    
+
 </body>
 </html>
