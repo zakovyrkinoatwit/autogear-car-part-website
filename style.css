@@ -9,6 +9,22 @@ body {
     background-color:  rgb(209, 207, 198);
 }
 /* Nav styling */
+header {
+    height: 6%;
+    margin-bottom: 6px;
+}
+nav {
+    background-color: black;
+    height: 100%;
+    padding: .2em;
+    color: white;
+}
+main {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 #search {
     display: flex;
     width: 28%;
@@ -43,25 +59,40 @@ body {
 }
 #cart img, #user img {
     height: 100%;
-}
-header {
-    height: 6%;
-    margin-bottom: 6px;
-}
-nav {
-    background-color: black;
-    height: 100%;
-    padding: .2em;
-    color: white;
+    cursor: pointer;
 }
 #logo {
     height: 100%;
 }
-main {
-    height: 85%;
+.login-container {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 175px;
+}
+.login-container input[type="text"], .login-container input[type="password"] {
+    width: 87%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.login-container button {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.message {
+    margin-top: 10px;
 }
 /* Hero banner styling */
 .mySlides {
