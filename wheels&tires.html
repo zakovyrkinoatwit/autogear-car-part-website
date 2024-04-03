@@ -26,13 +26,13 @@
                 <div class="product-item">
                     <img src="part-photos/car-wheel.png" alt="Wheel 1">
                     <h3>Performance Wheel</h3>
-                    <p>$150.00</p>
+                    <div class="price"><p>$150.00</p></div>
                     <button data-product-id="1" class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item">
                     <img src="part-photos/car-wheel.png" alt="Wheel 2">
                     <h3>All-Season Tire</h3>
-                    <p>$100.00</p>
+                    <div class="price"><p>$100.00</p></div>
                     <button data-product-id="2" class="add-to-cart">Add to Cart</button>
                 </div>
                 <!-- Continue listing more products here -->
@@ -68,7 +68,37 @@
             <button id="close-cart">Close Cart</button>
         </div>
     </div>
-    
+
+    <div class="cart">
+        <h2>CART</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="part-photos/car-wheel.png">
+                <div class="content">
+                    <div class="name">
+                        Product Name
+                    </div>
+                    <div class="price">
+                        $150    
+                    </div>
+                </div>
+                <div class="quantity">
+                    <button>-</button>
+                    <span class="value">3</span>
+                    <button>+</button>
+                </div>
+            </div>
+        </div>
+   
+    <div class="buttons">
+        <div class="close">CLOSE</div>
+        <div class="checkout">
+            <a href="checkoutPage.html">
+                CHECKOUT
+            </a>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
