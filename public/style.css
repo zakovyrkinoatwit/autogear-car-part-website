@@ -188,11 +188,8 @@ li img {
 footer {
     margin: 10px;
     width: 100%;
-    background-color: #333;
     height: fit-content;
     background-color: #333;
-    display: flex;
-    flex-direction: column;
 }
 footer .footer-container {
     display: flex;
