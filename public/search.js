@@ -16,7 +16,7 @@ let products = {
             productName: "Ceramic Brake Pads",
             category: "Parts",
             price: "30",
-            image: "part-photos/car-brakes.png"
+            image: "part-photos/car-ceramicbrakes.png"
         },
         {
             productName: "Performance Wheel",
