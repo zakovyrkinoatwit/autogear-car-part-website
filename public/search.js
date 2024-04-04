@@ -100,7 +100,7 @@ let products = {
             productName: "Wheel Cover",
             category: "Interior",
             price: "25",
-            image: "part-photos/car-weheelcover.png"
+            image: "part-photos/car-wheelcover.png"
         }
     ]
 };
