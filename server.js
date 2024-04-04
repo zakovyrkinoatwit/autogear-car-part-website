@@ -5,6 +5,9 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 app.use(express.static('public'));
 
 // Body Parser Middleware
@@ -30,25 +33,27 @@ app.post('/register', (req, res) => {
         res.send("Failed to register");
       } else {
         console.log(`A row has been inserted with rowid ${this.lastID}`);
-        res.redirect('/login.html'); // Redirect to login page after successful registration
+        res.render('account', { username: newUsername });
       }
     });
   });  
 // Login Endpoint
 app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-    const query = `SELECT * FROM users WHERE username = ? AND password = ?`;
-  
-    db.get(query, [username, password], (err, row) => {
+  const { username, password } = req.body;
+  const query = `SELECT * FROM users WHERE username = ?`;
+
+  db.get(query, [username], (err, row) => {
       if (err) {
-        res.status(400).json({"error": err.message});
-        return;
+          res.status(400).json({ "error": err.message });
+          return;
       }
-      if (row) {
-        console.log("User Found:", row);
-        res.redirect('/login.html');
+      if (row && row.password === password) {
+          // Correct password, redirect to account page
+          res.render('account', { username: row.username });
+      } else {
+          return
       }
-    });
-  });  
+  });
+});
 // Start the server
 app.listen(port, () => console.log(`Server running at http://localhost:${port}`));

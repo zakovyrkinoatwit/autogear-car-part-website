@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Account - <%= username %></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="homePage.html"><img src="autogearlogos\autogear-new-color-transparent.png" id="logo"></a>
+            <div id="cart">
+                <img src="autogearlogos/shopping-cart.png" id="cart-icon" style="cursor: pointer;">
+            </div>
+            <form action="search.html" method="get" id="search">
+                <input type="text" name="query" placeholder="    Search..." id="search-input">
+                <button type="submit"><img src="autogearlogos/search.png"></button>
+            </form>
+        </nav>
+    </header>
+    <main>
+        <div class="account-container">
+            <div class="profile-picture">
+                <img src="accountphotos/account-defaultuser.png" alt="Profile Picture">
+            </div>
+            <h1 class="welcome-text">Welcome, <%= username %>!</h1>
+            <div class="account-options">
+                <div class="account-option">
+                    <a href="homePage.html"><img src="accountphotos/account-settings.png" alt="Settings"></a>
+                    <h2>Settings</h2>
+                    <p>Manage your account preferences and personal details.</p>
+                </div>
+                <div class="account-option">
+                    <a href="homePage.html"><img src="accountphotos/account-car.png" alt="My Vehicles"></a>
+                    <h2>My Vehicles</h2>
+                    <p>View and manage your saved vehicles and their details.</p>
+                </div>
+                <div class="account-option">
+                    <a href="homePage.html"><img src="accountphotos/account-history.png" alt="Order History"></a>
+                    <h2>Order History</h2>
+                    <p>Review your past orders and track current order statuses.</p>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are passionate about providing the best auto parts and accessories for car enthusiasts.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: support@autogear.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="parts.html">Parts</a>
+                <a href="#">Special Offers</a>
+            </div>
+            <div class="copyright-bar">
+                Copyright © 2024 AutoGear.com. All rights reserved.
+            </div>
+    </footer>
+</body>
+</html>

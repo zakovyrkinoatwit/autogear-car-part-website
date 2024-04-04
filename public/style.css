@@ -453,5 +453,55 @@ footer .copyright-bar {
 label {
     display: block;
 }
-
-
+/* account.ejs styling */
+.account-container {
+    text-align: center;
+    margin: 2rem;
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #007bff;
+}
+.profile-picture img {
+    width: 100%;
+    height: auto;
+}
+.welcome-text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.account-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.account-option {
+    width: calc(33% - 1rem);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.account-option img {
+    width: 50px;
+    height: auto;
+}
+.account-option h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+.account-option p {
+    color: #666;
+}
+@media (max-width: 768px) {
+    .account-options {
+        flex-direction: column;
+    }
+    .account-option {
+        width: 100%;
+    }
+}
