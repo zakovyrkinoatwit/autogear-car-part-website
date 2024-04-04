@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Interior - AutoGear</title>
+    <title>Rims & Tires - AutoGear</title>
 </head>
 <body>
     <header>
         <nav>
             <a href="homePage.html"><img src="autogearlogos\autogear-new-color-transparent.png" id="logo"></a>
             <div id="cart">
-                <a href="checkoutPage.html"><img src="autogearlogos/shopping-cart.png"></a>
+                <img src="autogearlogos/shopping-cart.png" id="cart-icon" style="cursor: pointer;">
             </div>
             <form action="search.html" method="get" id="search">
                 <input type="text" name="query" placeholder="    Search..." id="search-input">
@@ -19,7 +19,9 @@
             </form>
         </nav>
     </header>
+
     <main>
+        <div id="notification-container" class="notification-container"></div>
         <section class="product-section">
             <h2>Interior</h2>
             <div class="product-list">
@@ -27,33 +29,46 @@
                     <img src="part-photos/car-mat.png" alt="Interior 1">
                     <h3>Floor Mat</h3>
                     <p>$65.00</p>
-                    <button>Add to Cart</button>
+                    <button data-product-id="13" class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item">
                     <img src="part-photos/car-seatcover.png" alt="Interior 2">
                     <h3>Seat</h3>
                     <p>$400.00</p>
-                    <button>Add to Cart</button>
+                    <button data-product-id="14" class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item">
                     <img src="part-photos/car-shiftknob.png" alt="Interior 3">
                     <h3>Shift Knob</h3>
                     <p>$45.00</p>
-                    <button>Add to Cart</button>
+                    <button data-product-id="15" class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item">
                     <img src="part-photos/car-pedals.png" alt="Interior 4">
                     <h3>Pedals</h3>
                     <p>$155.00</p>
-                    <button>Add to Cart</button>
+                    <button data-product-id="16" class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item">
                     <img src="part-photos/car-wheelcover.png" alt="Interior 5">
                     <h3>Wheel Cover</h3>
                     <p>$25.00</p>
-                    <button>Add to Cart</button>
+                    <button data-product-id="17" class="add-to-cart">Add to Cart</button>
                 </div>
                 <!-- Continue listing more products here -->
+            </div>
+            <div id="cart-overlay" class="cart-overlay">
+                <div class="cart">
+                    <h2>Your Cart</h2>
+                    <div id="cart-items">
+                        
+                    </div>
+                    <div class="cart-footer">
+                        <button id="close-cart">Close Cart</button>
+                        <span id="total-price">Total Price: $0</span>
+                        <a href="checkout.html" class="checkout-button">Checkout</a>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="categories">
@@ -85,6 +100,7 @@
             </ul>
         </section>
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -105,6 +121,9 @@
                 Copyright © 2024 AutoGear.com. All rights reserved.
             </div>
     </footer>
-    <script type="text/javascript" src="functionality.js"></script>
+    
+   
+
 </body>
+<script type="text/javascript" src="cart.js"></script>
 </html>

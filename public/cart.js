@@ -113,7 +113,7 @@ let products = {
             image: "part-photos/car-pedals.png"
         },
         {
-            id: "16",
+            id: "17",
             productName: "Wheel Cover",
             category: "Interior",
             price: "25",
