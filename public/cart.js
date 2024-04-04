@@ -123,8 +123,21 @@ let products = {
 };
 
 let cart = [];
+loadCart();
 
-// Function to add a product to the cart
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function loadCart() {
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+        cart = JSON.parse(storedCart);
+        updateCartUI(); // Make sure the UI reflects the loaded cart
+    }
+}
+
+// Function to -add a product to the cart
 function addToCart(productId) {
     const product = products.data.find(p => p.id === productId);
     if (!product) return; 
@@ -135,8 +148,10 @@ function addToCart(productId) {
     } else {
         cart.push({ ...product, quantity: 1 });
     }
-
+   
+    saveCart();
     updateCartUI();
+    showNotification(`Added ${product.productName} to the cart.`);
 }
 
 // Function to update the cart display
@@ -174,7 +189,24 @@ function updateCartUI() {
     document.getElementById('total-price').innerText = `Total: $${totalPrice.toFixed(2)}`;
 }
 
+function showNotification(message) {
+    const container = document.getElementById('notification-container');
+    const notification = document.createElement('div');
+    notification.classList.add('notification');
+    notification.textContent = message;
 
+    // Add the notification to the container
+    container.appendChild(notification);
+    container.style.display = 'block';
+
+    // Automatically hide the notification after 3 seconds
+    setTimeout(() => {
+        notification.remove();
+        if (container.children.length === 0) {
+            container.style.display = 'none';
+        }
+    }, 3000);
+}
 
 // Function to change the quantity of a cart item
 function changeQuantity(productId, delta) {
@@ -185,7 +217,7 @@ function changeQuantity(productId, delta) {
     if (cartItem.quantity <= 0) {
         cart = cart.filter(item => item.id !== productId);
     }
-
+    saveCart();
     updateCartUI();
 }
 

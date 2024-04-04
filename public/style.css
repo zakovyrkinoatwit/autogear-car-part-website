@@ -415,3 +415,20 @@ footer .copyright-bar {
     flex-grow: 1; /* Allows the total price to take up any available space */
     /* Additional styling as needed */
 }
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 100px;
+    z-index: 1000;
+    display: none;
+    
+}
+
+.notification {
+    background: linear-gradient(to right, orange, red);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}

@@ -10,7 +10,7 @@
         <header>
             <nav>
                 <div id="cart">
-                    <a href="checkoutPage.html"><img src="autogearlogos/shopping-cart.png"></a>
+                    <img src="autogearlogos/shopping-cart.png" id="cart-icon" style="cursor: pointer;">
                 </div>
                 <div id="user">
                     <img src="autogearlogos/user-icon.png" id="user-icon">
@@ -39,6 +39,19 @@
             </nav>
         </header>
         <main>
+            <div id="cart-overlay" class="cart-overlay">
+                <div class="cart">
+                    <h2>Your Cart</h2>
+                    <div id="cart-items">
+                        <!-- Cart items will be dynamically inserted here -->
+                    </div>
+                    <div class="cart-footer">
+                        <button id="close-cart">Close Cart</button>
+                        <span id="total-price">Total Price: $0</span>
+                        <a href="checkout.html" class="checkout-button">Checkout</a>
+                    </div>
+                </div>
+            </div>
             <div class="slideshow-container">
                 <div class="mySlides fade" style="background-image: url('bannerphotos/car1.png');"></div>
                 <div class="mySlides fade" style="background-image: url('bannerphotos/car2.png');"></div>
@@ -98,5 +111,6 @@
             </div>
         </footer>  
         <script type="text/javascript" src="functionality.js"></script>
+        <script type="text/javascript" src="cart.js"></script>
     </body>
 </html> 
