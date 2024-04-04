@@ -227,6 +227,7 @@ footer .copyright-bar {
 }
 .product-item {
     width: 220px;
+    height: 350px;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
@@ -235,7 +236,7 @@ footer .copyright-bar {
 }
 .product-item img {
     width: 100%;
-    height: auto;
+    height: 60%;
     border-bottom: 1px solid #eee;
     margin-bottom: 10px;
 }
