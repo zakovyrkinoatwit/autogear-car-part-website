@@ -237,3 +237,5 @@ document.getElementById('cart-icon').addEventListener('click', function() {
 document.getElementById('close-cart').addEventListener('click', function() {
     document.getElementById('cart-overlay').style.display = 'none';
 });
+
+
