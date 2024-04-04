@@ -27,13 +27,13 @@
                 <div class="product-item">
                     <img src="part-photos/car-wheel.png" alt="Wheel 1">
                     <h3>Performance Wheel</h3>
-                    <div class="price">$150.00</div>
+                    <div class="price"><p>$150.00</p></div>
                     <button data-product-id="1" class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item">
                     <img src="part-photos/car-wheel.png" alt="Wheel 2">
                     <h3>All-Season Tire</h3>
-                    <div class="price">$100.00</div>
+                    <div class="price"><p>$100.00</p></div>
                     <button data-product-id="2" class="add-to-cart">Add to Cart</button>
                 </div>
                 <div class="product-item">
@@ -61,6 +61,19 @@
                     <button data-product-id="2" class="add-to-cart">Add to Cart</button>
                 </div>
                 <!-- Continue listing more products here -->
+            </div>
+            <div id="cart-overlay" class="cart-overlay">
+                <div class="cart">
+                    <h2>Your Cart</h2>
+                    <div id="cart-items">
+                        <!-- Cart items will be dynamically inserted here -->
+                    </div>
+                    <div class="cart-footer">
+                        <button id="close-cart">Close Cart</button>
+                        <span id="total-price">Total Price: $0</span>
+                        <a href="checkout.html" class="checkout-button">Checkout</a>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="categories">
@@ -115,45 +128,6 @@
     </footer>
     <script type="text/javascript" src="cart.js"></script>
    
- <!--   <div id="cart-overlay" class="cart-overlay">
-        <div class="cart">
-            <h2>Your Cart</h2>
-            <div id="cart-items"></div>
-            <button id="close-cart">Close Cart</button>
-        </div>
-    </div>
--->
-
-    <div class="cart">
-        <h2>CART</h2>
-        <div class="product-list">
-            <div class="product-item-cart">
-                <img src="part-photos/car-wheel.png">
-                <div class="content">
-                    <div class="name">
-                        Product Name
-                    </div>
-                    <div class="price">
-                        $150    
-                    </div>
-                </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span class="value">3</span>
-                    <button>+</button>
-                </div>
-            </div>
-        </div>
-   
-    <div class="buttons">
-        <div class="close">CLOSE</div>
-        <div class="checkout">
-            <a href="checkoutPage.html">
-                CHECKOUT
-            </a>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>
