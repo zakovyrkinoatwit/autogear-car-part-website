@@ -20,10 +20,24 @@
             </nav>
         </header>
         <main>
+            <div id="notification-container" class="notification-container"></div>
             <section class="product-section">
                 <div class="product-list">
                 </div>
             </section>     
+            <div id="cart-overlay" class="cart-overlay">
+                <div class="cart">
+                    <h2>Your Cart</h2>
+                    <div id="cart-items">
+                        
+                    </div>
+                    <div class="cart-footer">
+                        <button id="close-cart">Close Cart</button>
+                        <span id="total-price">Total Price: $0</span>
+                        <a href="checkoutPage.html" class="checkout-button">Checkout</a>
+                    </div>
+                </div>
+            </div>
             <section class="categories">
                 <ul>
                     <li>
@@ -53,6 +67,7 @@
                 </ul>
             </section>
             <script src="search.js"></script>
+            <script type="text/javascript" src="cart.js"></script>
         </main>
         <footer>
             <div class="footer-container">
@@ -74,7 +89,6 @@
                     Copyright © 2024 AutoGear.com. All rights reserved.
                 </div>                    
             </div>
-        </footer>  
-        <script type="text/javascript" src="functionality.js"></script>
+        </footer>
     </body>
 </html> 

@@ -1,4 +1,4 @@
-let products = {
+let items = {
     data: [
         {
             id: "1",
@@ -37,83 +37,97 @@ let products = {
         },
         {
             id: "6",
+            productName: "Aluminum Rims",
+            category: "Wheels and Tires",
+            price: "199",
+            image: "part-photos/car-wheel.png"
+        },
+        {
+            id: "7",
+            productName: "Steel Rims",
+            category: "Wheels and Tires",
+            price: "25",
+            image: "part-photos/car-wheel.png"
+        },
+        {
+            id: "8",
             productName: "Body Kit",
             category: "Exterior Parts",
             price: "2300",
             image: "part-photos/car-exterior.png"
         },
         {
-            id: "7",
+            id: "9",
             productName: "Tow Hitch",
             category: "Exterior Parts",
             price: "120",
             image: "part-photos/car-towhitch.png"
         },
         {
-            id: "8",
+            id: "10",
             productName: "Custom Bumper",
             category: "Body Parts",
             price: "230",
             image: "part-photos/car-bumper.png"
         },
         {
-            id: "9",
+            id: "11",
             productName: "Front Fender",
             category: "Body Parts",
             price: "120",
             image: "part-photos/car-fender.png"
         },
         {
-            id: "10",
+            id: "12",
             productName: "Inner Fender",
             category: "Body Parts",
             price: "100",
             image: "part-photos/car-innerfender.png"
         },
         {
-            id: "11",
+            id: "13",
             productName: "Headlight Bulb",
             category: "Lighting",
             price: "10",
             image: "part-photos/car-lightbulb.png"
         },
         {
-            id: "12",
+            id: "14",
             productName: "Signal",
             category: "Lighting",
             price: "20",
             image: "part-photos/car-signallight.png"
         },
         {
-            id: "13",
+            id: "15",
             productName: "Floor Mat",
             category: "Interior",
             price: "400",
             image: "part-photos/car-mat.png"
         },
         {
-            id: "14",
+            id: "16",
             productName: "Seat",
             category: "Interior",
             price: "400",
             image: "part-photos/car-seatcover.png"
         },
         {
-            id: "15",
+            id: "17",
             productName: "Shift Knob",
             category: "Interior",
             price: "45",
             image: "part-photos/car-shiftknob.png"
         },
         {
-            id: "16",
+            id: "18",
             productName: "Pedals",
             category: "Interior",
             price: "155",
             image: "part-photos/car-pedals.png"
         },
         {
-            id: "16",
+            id: "19",
             productName: "Wheel Cover",
             category: "Interior",
             price: "25",
@@ -121,7 +135,7 @@ let products = {
         }
     ]
 };
-for (let i of products.data) {
+for (let i of items.data) {
     let item = document.createElement("div");
     item.classList.add("product-item", i.category.replace(/\s+/g, '-').toLowerCase()); // Added replace to handle categories with spaces
     let image = document.createElement("img");
@@ -136,6 +150,8 @@ for (let i of products.data) {
     price.textContent = "$" + i.price; // Corrected concatenation
     item.appendChild(price); // Corrected to append the price
     let button = document.createElement("button");
+    button.setAttribute("data-product-id", i.id);
+    button.classList.add("add-to-cart");
     button.textContent = "Add to Cart";
     item.appendChild(button); // Corrected to append the button
 
