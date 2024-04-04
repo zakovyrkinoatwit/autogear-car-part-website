@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Wheels & Tires - AutoGear</title>
+    <title>Rims & Tires - AutoGear</title>
 </head>
 <body>
     <header>
@@ -13,16 +13,16 @@
             <div id="cart">
                 <img src="autogearlogos/shopping-cart.png" id="cart-icon" style="cursor: pointer;">
             </div>
-            <div id="search">
-                <input type="text" placeholder="    Search...">
+            <form action="search.html" method="get" id="search">
+                <input type="text" name="query" placeholder="    Search..." id="search-input">
                 <button type="submit"><img src="autogearlogos/search.png"></button>
-            </div>
+            </form>
         </nav>
     </header>
 
     <main>
         <section class="product-section">
-            <h2>Wheels & Tires</h2>
+            <h2>Rims & Tires</h2>
             <div class="product-list">
                 <div class="product-item">
                     <img src="part-photos/car-wheel.png" alt="Wheel 1">
@@ -36,8 +36,60 @@
                     <div class="price">$100.00</div>
                     <button data-product-id="2" class="add-to-cart">Add to Cart</button>
                 </div>
+                <div class="product-item">
+                    <img src="part-photos/car-wheel.png" alt="Rim 1">
+                    <h3>Aluminum Rims</h3>
+                    <div class="price"><p>$199.00</p></div>
+                    <button data-product-id="2" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="part-photos/car-wheel.png" alt="Rim 2">
+                    <h3>Steel Rims</h3>
+                    <div class="price"><p>$75.00</p></div>
+                    <button data-product-id="2" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="part-photos/car-wheel.png" alt="Rim 1">
+                    <h3>Aluminum Rims</h3>
+                    <div class="price"><p>$199.00</p></div>
+                    <button data-product-id="2" class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="part-photos/car-wheel.png" alt="Rim 2">
+                    <h3>Steel Rims</h3>
+                    <div class="price"><p>$75.00</p></div>
+                    <button data-product-id="2" class="add-to-cart">Add to Cart</button>
+                </div>
                 <!-- Continue listing more products here -->
             </div>
+        </section>
+        <section class="categories">
+            <ul>
+                <li>
+                    <img src="part-photos/car-brakes.png">
+                    <a href="Parts.html">Parts</a>
+                </li>
+                <li>
+                    <img src="part-photos/car-wheel.png">
+                    <a href="wheels&tires.html">Rims & Tires</a>
+                </li>
+                <li>
+                    <img src="part-photos/car-exterior.png">
+                    <a href="exterior.html"><p>Exterior</p></a>
+                </li>
+                <li>
+                    <img src="part-photos/car-fender.png">
+                    <a href="body.html"><p>Body</p></a>
+                </li>
+                <li>
+                    <img src="part-photos/car-light.png">
+                    <a href="lighting.html"><p>Lighting</p></a>
+                </li>
+                <li>
+                    <img src="part-photos/car-mat.png">
+                    <a href="interior.html"><p>Interior</p></a>
+                </li>
+            </ul>
         </section>
     </main>
 

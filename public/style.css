@@ -20,18 +20,27 @@ nav {
     color: white;
 }
 main {
-    height: 85%;
+    min-height: 85%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 #search {
     display: flex;
+    float: right;
+    text-align: left;
+    display: flex;
+    justify-content: right;
     width: 28%;
     height: 85%;
     position: relative;
     float: inline-end;
     margin-right: 30%;
+}
+form {
+    width: 100%;
+    height: 100%;
 }
 #search img {
     height: 100%;
@@ -60,6 +69,18 @@ main {
 #cart img, #user img {
     height: 100%;
     cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    height: 6%;
+    margin-bottom: 6px;
+}
+nav {
+    background-color: black;
+    height: 100%;
+    padding: .2em;
+    color: white;
 }
 #logo {
     height: 100%;
@@ -106,6 +127,7 @@ main {
     width: 100%;
     height: 70.60%;
     z-index: -1;
+    margin-bottom: 15px;
 }
 .slideshow-container img {
     width: 100%;
@@ -160,9 +182,12 @@ li img {
     position: relative;
     height: 92%;
     width: 100%;
+    border-radius: 10px;
 }
 /* Footer Styling */
 footer {
+    margin: 10px;
+    width: 100%;
     height: fit-content;
     background-color: #333;
 }
@@ -208,7 +233,6 @@ footer .copyright-bar {
     width: 100%;
     box-sizing: border-box;
 }
-
 /* Products */
 .product-section {
     
@@ -270,6 +294,61 @@ footer .copyright-bar {
 .product-item button:hover {
     background-color: #0056b3;
 }
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    } 
+    .product-item {
+        width: 90%; /* Makes each product take up more space on smaller screens */
+    }
+}
+.cart-overlay {
+    position: fixed; /* Positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it sits on top of other content */
+}
 
+.cart {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px; /* Adjust based on your design */
+}
 
+#cart-items {
+    margin-bottom: 20px;
+}
 
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-cart {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
